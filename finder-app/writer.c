@@ -51,5 +51,9 @@ int main(int argc, char* argv[]){
         printf("Something wrong when writing\n");
         return RET_ERROR;
     }
+    
+    if(close(fd) == -1){
+        perror("Error returned:");
+    }
      
 }
